@@ -1,6 +1,6 @@
 # Space Researcher/Technologist
 
-#### Technical Skills: Python, SQL, AWS, Snowflake, MATLAB
+#### Technical Skills: Python, SQL, MATLAB, Data Analytics
 
 ## Education
 - Andromeda program, Space Transportation Systems | Deep Space Initiative (_2024_)								       		
