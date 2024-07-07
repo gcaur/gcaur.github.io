@@ -1,55 +1,83 @@
-# Data Scientist
+# Space Researcher/Technologist
 
 #### Technical Skills: Python, SQL, AWS, Snowflake, MATLAB
 
 ## Education
-- Ph.D., Physics | The University of Texas at Dallas (_May 2022_)								       		
-- M.S., Physics	| The University of Texas at Dallas (_December 2019_)	 			        		
-- B.S., Physics | The University of Texas at Dallas (_May 2017_)
+- Andromeda program, Space Transportation Systems | Deep Space Initiative (_2024_)								       		
+- Pg Dip, Computer Applications	| Swami Vivekanand Subharti University (_2021_)	 			        		
+- B.E., Civil Engineering | Panjab University (_2015_)
+
+## Research Interests
+Space Sciences and instrumentation, Applied Mathematics, and Computational Analysis
 
 ## Work Experience
-**Data Scientist @ Toyota Financial Services (_June 2022 - Present_)**
-- Uncovered and corrected missing step in production data pipeline which impacted over 70% of active accounts
-- Redeveloped loan originations model which resulted in 50% improvement in model performance and saving 1 million dollars in potential losses
+**Data Scientist (research) (_Dec 2020 - Present_)**
+- Analyzed large datasets using statistical methods to uncover trends, patterns, and insights. Developed predictive models and machine learning algorithms to solve research problems.
+- Collaborated with cross-functional teams to understand business requirements and formulate data-driven solutions. Cleaned, preprocessed, and transformed data to ensure accuracy and consistency.
+- Built and maintained data pipelines for efficient data processing and analysis. Communicated findings and
+recommendations to stakeholders through data visualization, reports, and presentations.
 
-**Data Science Consultant @ Shawhin Talebi Ventures LLC (_December 2020 - Present_)**
-- Conducted data collection, processing, and analysis for novel study evaluating the impact of over 300 biometrics variables on human performance in hyper-realistic, live-fire training scenarios
-- Applied unsupervised deep learning approaches to longitudinal ICU data to discover novel sepsis sub-phenotypes
+**Data Analyst, Telus International AI (_Dec 2021 - Dec 2022_)**
+- Utilized multiple techniques to extract and analyze data from various sources, achieving 95% accuracy in verifying and comparing data relevance in web-based settings.
+- Engaged in data annotation tasks to enhance machine learning models or datasets, applying JavaScript and Puppeteer for automation. Improved data collection methodologies, incorporating SQL databases for efficient storage and retrieval of information.
+
+**Consultant, MakeMyTrip (_May 2019 - Apr 2021_)**
+- Applied web scraping methods to gather competitive intelligence and market insights, contributing to a 20% increase in international sales through data-driven identification of new target markets.
+- Streamlined communication and reduced response time by 40% by implementing an automated CRM system, leveraging REST APIs for seamless integration with existing platforms.
+- Conducted web scraping to monitor competitor pricing strategies and customer reviews, informing strategic decision-making processes
+
+**Software Engineer, Diya Systems (GlowTouch Technologies) (_Aug 2016 - Oct 2017_)**
+- Participated in all stages of the Software Development Lifecycle (SDLC) to ensure accurate scope definition and minimize rework.
+- Developed and maintained web applications (audit tool for Bank: Pentana by Ideagen) using ASP.Net and version control systems.
+- Enhanced application performance by 15% through C# code optimization.
+
+**Business Data Analyst, Multiple IT Startups (_2013 - 2016_)**
+- Collaborated with cross-functional teams to develop and maintain product backlogs using data analysis.
+- Managed projects, leading to a 90% on-time completion rate.
+- Increased client satisfaction by 20% through improved communication (training materials) and data-driven decision-making (daily research with high accuracy).
+- Reduced project timelines by 25% through effective project management tools.
 
 ## Projects
-### Data-Driven EEG Band Discovery with Decision Trees
-[Publication](https://www.mdpi.com/1424-8220/22/8/3048)
+### Study of Small Satellite Constellation for High-Resolution Greenhouse Gas Monitoring
+[Publication](https://www.researchgate.net/publication/374550686_Study_of_Small_Satellite_Constellation_for_High-Resolution_Greenhouse_Gas_Monitoring)
 
-Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+This paper aims to improve the capacity of existing GHG monitoring systems by presenting a cost-effective conceptual small satellite constellation mission design based on a novel payload for active remote sensing of CO2 and CH4 with high temporal and spatial resolution.
 
 ![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg)
 
-### Decoding Physical and Cognitive Impacts of Particulate Matter Concentrations at Ultra-Fine Scales
-[Publication](https://www.mdpi.com/1424-8220/22/11/4240)
+### Analysis of the Impact of volcanic eruptions on fishery resources using Earth Observation Data
+[Publication](https://www.researchgate.net/publication/364263323_Analysis_of_the_impact_of_volcanic_eruptions_on_fishery_resources_using_Earth_Observation_data)
 
-Used **Matlab** to train over 100 machine learning models which estimated particulate matter concentrations based on a suite of over 300 biometric variables. We found biometric variables can be used to accurately estimate particulate matter concentrations at ultra-fine spatial scales with high fidelity (r2 = 0.91) and that smaller particles are better estimated than larger ones. Inferring environmental conditions solely from biometric measurements allows us to disentangle key interactions between the environment and the body.
+This paper aims to analyze and perform a comparative study of the effect of several volcanic eruptions on aquatic ecosystems using available Earth Observation data.
 
 ![Bike Study](/assets/img/bike_study.jpeg)
 
-## Talks & Lectures
-- Causality: The new science of an old question - GSP Seminar, Fall 2021
-- Guest Lecture: Dimensionality Reduction - Big Data and Machine Learning for Scientific Discovery (PHYS 5336), Spring 2021
-- Guest Lecture: Fourier and Wavelet Transforms - Scientific Computing (PHYS 5315), Fall 2020
-- A Brief Introduction to Optimization - GSP Seminar, Fall 2019
-- Weeks of Welcome Poster Competition - UTD, Fall 2019
-- A Brief Introduction to Networks - GSP Seminar, Spring 2019
+### Revolutionizing Space Traffic Management: Detection, Tracking, and Characterization Services Using Constellation of Sub-GEO SmallSats
+- Working on the systems engineering side of the research.
+- Portions currently contributed are Structures and CDHS, with an eventual focus on astrodynamics by running Matlab simulations.
 
-- [Data Science YouTube](https://www.youtube.com/channel/UCa9gErQ9AE5jT2DZLjXBIdA)
+### Lunar Optical High-Rate Data Relay Network: A Preliminary Study for Small Satellite Constellations
+- Working on defining the functional analysis for the project's initial phase.
+- Defining the system definition for spacecraft configuration to design a small satellite orbiting around the Moon.
+
+## Presentations and Conferences
+- “The Technical Feasibility of 3D Printing Technology for Lunar Base”, IAC 2023 Slides
+- “Study of Small Satellite Constellation for High-Resolution Greenhouse Gas Monitoring” IAC 2023
+- “Analysis of the impact of volcanic eruptions on fishery resources using EO data” IAC 2022 Slides
+- “Towards a Lunar Generation MVA 2021 workshop findings”, MVA Winter Workshop, 2022
+- “Rise of space rovers and robotics in the Asia Pacific region” AP-SGOW, 2021
+- “Towards a Lunar Generation: First MVA Online Workshop” 2021
+- “Explore Titan’s Surface and Saltwater Layer for Potential Life”, 2023
 
 ## Publications
-1. Talebi S., Lary D.J., Wijeratne L. OH., and Lary, T. Modeling Autonomic Pupillary Responses from External Stimuli Using Machine Learning (2019). DOI: 10.26717/BJSTR.2019.20.003446
-2. Wijeratne, L.O.; Kiv, D.R.; Aker, A.R.; Talebi, S.; Lary, D.J. Using Machine Learning for the Calibration of Airborne Particulate Sensors. Sensors 2020, 20, 99.
-3. Lary, D.J.; Schaefer, D.; Waczak, J.; Aker, A.; Barbosa, A.; Wijeratne, L.O.H.; Talebi, S.; Fernando, B.; Sadler, J.; Lary, T.; Lary, M.D. Autonomous Learning of New Environments with a Robotic Team Employing Hyper-Spectral Remote Sensing, Comprehensive In-Situ Sensing and Machine Learning. Sensors 2021, 21, 2240. https://doi.org/10.3390/s21062240
-4. Zhang, Y.; Wijeratne, L.O.H.; Talebi, S.; Lary, D.J. Machine Learning for Light Sensor Calibration. Sensors 2021, 21, 6259. https://doi.org/10.3390/s21186259
-5. Talebi, S.; Waczak, J.; Fernando, B.; Sridhar, A.; Lary, D.J. Data-Driven EEG Band Discovery with Decision Trees. Preprints 2022, 2022030145 (doi: 10.20944/preprints202203.0145.v1).
-6. Fernando, B.A.; Sridhar, A.; Talebi, S.; Waczak, J.; Lary, D.J. Unsupervised Blink Detection Using Eye Aspect Ratio Values. Preprints 2022, 2022030200 (doi: 10.20944/preprints202203.0200.v1).
-7. Talebi, S. et al. Decoding Physical and Cognitive Impacts of PM Concentrations at Ultra-fine Scales, 29 March 2022, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-1499191/v1]
-8. Lary, D.J. et al. (2022). Machine Learning, Big Data, and Spatial Tools: A Combination to Reveal Complex Facts That Impact Environmental Health. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_12
-9. Wijerante, L.O.H. et al. (2022). Advancement in Airborne Particulate Estimation Using Machine Learning. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_13
+1. A Abruscato,..., G. Kaur, et al, ”Small Satellites application for optical communications around the moon: a feasibility study”, IAC 24 **accepted**
+2. M Nayyer,..., G. Kaur, et al, ”Optimizing SmallSat Constellation for Enhanced STM in LEO”, IAC 24 **accepted**
+3. G Kaur, F Sougioultzoglou, A M. Hein, “Impact Analysis of Space Debris Present in LEO to Spacecraft Aiming for the Lunar Orbit”, IAC 24 **accepted**
+4. I Fiore,..., G Kaur, et al, ”Lunex SpaceHomes Project Innovations and Challenges in Lunar Habitat Development: A Sustainable Future on the Moon through the use of Artificial Intelligence (AI)”, IAC 24 **accepted**
+5. A Amhaz,..., G Kaur, S Difallah, et al, “The Role and Challenges of Earth Observation in the 2020 Beirut Explosion Humanitarian Response”, IAC 24 **accepted**
+6. L Ligono, T Nguyen, G Kaur, G Christodoulou, E Fern´andez-Rodr´ıguez, “Analysis of the impact of volcanic eruptions in Kilauea Volcano using Earth Observation data” **submitted**
+7. G Kaur, et al, “The Technical Feasibility of 3D Printing Technology for Lunar Base”, IAC 2023 
+8. A Karim,..., G Kaur, K Mirza, et al, “Study of Small Satellite Constellation for High-Resolution Greenhouse Gas Monitoring” IAC 2023 
+9. Z Rowland, M Thi,..., G Kaur, Z Okba, “Analysis of the impact of volcanic eruptions on fishery resources using Earth Observation data” IAC 
 
 - [Data Science Blog](https://medium.com/@shawhin)
