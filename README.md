@@ -12,8 +12,8 @@ Space Sciences and instrumentation, Applied Mathematics, and Computational Analy
 
 ## Work Experience
 **Data Scientist (research) (_Dec 2020 - Present_)**
-- Analyzed large datasets using statistical methods to uncover trends, patterns, and insights. Developed predictive models and machine learning algorithms to solve research problems.
-- Collaborated with cross-functional teams to understand business requirements and formulate data-driven solutions. Cleaned, preprocessed, and transformed data to ensure accuracy and consistency.
+- Analyzed large datasets using statistical methods to uncover trends, patterns, and insights. Developed predictive models and machine learning algorithms to solve research problems.
+- Collaborated with cross-functional teams to understand business requirements and formulate data-driven solutions. Cleaned, preprocessed, and transformed data to ensure accuracy and consistency.
 - Built and maintained data pipelines for efficient data processing and analysis. Communicated findings and
 recommendations to stakeholders through data visualization, reports, and presentations.
 
