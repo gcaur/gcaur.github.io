@@ -80,4 +80,4 @@ This paper aims to analyze and perform a comparative study of the effect of seve
 8. A Karim,..., G Kaur, K Mirza, et al, “Study of Small Satellite Constellation for High-Resolution Greenhouse Gas Monitoring” IAC 2023 
 9. Z Rowland, M Thi,..., G Kaur, Z Okba, “Analysis of the impact of volcanic eruptions on fishery resources using Earth Observation data” IAC 
 
-- [Data Science Blog](https://medium.com/@shawhin)
+- [Medium Blog](https://medium.com/@gagandeep.docs)
