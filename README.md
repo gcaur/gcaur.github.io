@@ -43,14 +43,10 @@ recommendations to stakeholders through data visualization, reports, and present
 
 This paper aims to improve the capacity of existing GHG monitoring systems by presenting a cost-effective conceptual small satellite constellation mission design based on a novel payload for active remote sensing of CO2 and CH4 with high temporal and spatial resolution.
 
-![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg)
-
 ### Analysis of the Impact of volcanic eruptions on fishery resources using Earth Observation Data
 [Publication](https://www.researchgate.net/publication/364263323_Analysis_of_the_impact_of_volcanic_eruptions_on_fishery_resources_using_Earth_Observation_data)
 
 This paper aims to analyze and perform a comparative study of the effect of several volcanic eruptions on aquatic ecosystems using available Earth Observation data.
-
-![Bike Study](/assets/img/bike_study.jpeg)
 
 ### Revolutionizing Space Traffic Management: Detection, Tracking, and Characterization Services Using Constellation of Sub-GEO SmallSats
 - Working on the systems engineering side of the research.
