@@ -4,7 +4,7 @@
 Passionate about space sciences, exoplanet instrumentation, small satellite missions, and computational analysis for future observatories like NASA's Habitable Worlds Observatory (HWO).
 
 ### Contact
-- **[LinkedIn](https://linkedin.com/in/engineergkaur)** | **[Google Scholar](https://scholar.google.com/citations?user=Zc3zMKYAAAAJ&hl=en)** | **[ResearchGate](https://www.researchgate.net/profile/Gagandeep-Kaur-146)** | **[GitHub](https://github.com/gcaur)** | **[Email](mailto:gagandeep.docs@gmail.com)**  
+ **[LinkedIn](https://linkedin.com/in/engineergkaur)** | **[Google Scholar](https://scholar.google.com/citations?user=Zc3zMKYAAAAJ&hl=en)** | **[ResearchGate](https://www.researchgate.net/profile/Gagandeep-Kaur-146)** | **[GitHub](https://github.com/gcaur)** | **[Email](mailto:gagandeep.docs@gmail.com)**  
 
 ### Technical Skills
 Python • R • MATLAB • SQL • PostgreSQL • Data Analytics • QGIS • Machine Learning (XGBoost, scikit-learn, TensorFlow, PyTorch) • C#.NET • CFD • JupyterLab • Remote Sensing • LaTeX
