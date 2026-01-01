@@ -1,79 +1,90 @@
-# Space Researcher/Technologist
+# Gagandeep Kaur
 
-#### Technical Skills: Python, SQL, MATLAB, Data Analytics
+**Space Researcher / Technologist**  
+Passionate about space sciences, exoplanet instrumentation, small satellite missions, and computational analysis for future observatories like NASA's Habitable Worlds Observatory (HWO).
 
-## Education
-- Andromeda program, Space Transportation Systems | Deep Space Initiative (_2024_)								       		
-- Pg Dip, Computer Applications	| Swami Vivekanand Subharti University (_2021_)	 			        		
-- B.E., Civil Engineering | Panjab University (_2015_)
+### Contact
+- **LinkedIn** | **Google Scholar** | **ResearchGate** | **GitHub** | **Email**  
+  (Replace with your actual links: e.g., [LinkedIn](https://linkedin.com/in/yourprofile))
 
-## Research Interests
-Space Sciences and instrumentation, Applied Mathematics, and Computational Analysis
+### Technical Skills
+Python • R • MATLAB • SQL • PostgreSQL • Data Analytics • QGIS • Machine Learning (XGBoost, scikit-learn, TensorFlow, PyTorch) • C#.NET • CFD • JupyterLab • Remote Sensing • LaTeX
 
-## Work Experience
-**Data Scientist (research) (_Dec 2020 - Present_)**
-- Analyzed large datasets using statistical methods to uncover trends, patterns, and insights. Developed predictive models and machine learning algorithms to solve research problems.
-- Collaborated with cross-functional teams to understand business requirements and formulate data-driven solutions. Cleaned, preprocessed, and transformed data to ensure accuracy and consistency.
-- Built and maintained data pipelines for efficient data processing and analysis. Communicated findings and
-recommendations to stakeholders through data visualization, reports, and presentations.
+### Education
+- **M.Sc. in Space Systems and Business Engineering (SpaceTech)**  
+  Technische Universität Graz (TU Graz), Austria  
+  Mar 2026 – Dec 2027 (Expected) • Full scholarship recipient
 
-**Data Analyst, Telus International AI (_Dec 2021 - Dec 2022_)**
-- Utilized multiple techniques to extract and analyze data from various sources, achieving 95% accuracy in verifying and comparing data relevance in web-based settings.
-- Engaged in data annotation tasks to enhance machine learning models or datasets, applying JavaScript and Puppeteer for automation. Improved data collection methodologies, incorporating SQL databases for efficient storage and retrieval of information.
+- **Andromeda Research Program on Space Transportation Systems**  
+  Deep Space Initiative (1-year program) • 2024  
+  Research: "Impact Analysis of Space Debris Present in LEO to Spacecraft Aiming for the Lunar Orbit"  
+  Advisor: Prof. Dr. Andreas M. Hein
 
-**Consultant, MakeMyTrip (_May 2019 - Apr 2021_)**
-- Applied web scraping methods to gather competitive intelligence and market insights, contributing to a 20% increase in international sales through data-driven identification of new target markets.
-- Streamlined communication and reduced response time by 40% by implementing an automated CRM system, leveraging REST APIs for seamless integration with existing platforms.
-- Conducted web scraping to monitor competitor pricing strategies and customer reviews, informing strategic decision-making processes
+- **Postgraduate Diploma (PgDip) in Computer Applications**  
+  Subharti University, India • 2021
 
-**Software Engineer, Diya Systems (GlowTouch Technologies) (_Aug 2016 - Oct 2017_)**
-- Participated in all stages of the Software Development Lifecycle (SDLC) to ensure accurate scope definition and minimize rework.
-- Developed and maintained web applications (audit tool for Bank: Pentana by Ideagen) using ASP.Net and version control systems.
-- Enhanced application performance by 15% through C# code optimization.
+- **B.E. in Civil Engineering (Minor: Mechanical Engineering)**  
+  Panjab University, India • 2015  
+  Thesis: "Research to Study the Construction of a 15 MW Small Hydropower Plant"  
+  Supervisor: Dr. Aradhana Mehta
 
-**Business Data Analyst, Multiple IT Startups (_2013 - 2016_)**
-- Collaborated with cross-functional teams to develop and maintain product backlogs using data analysis.
-- Managed projects, leading to a 90% on-time completion rate.
-- Increased client satisfaction by 20% through improved communication (training materials) and data-driven decision-making (daily research with high accuracy).
-- Reduced project timelines by 25% through effective project management tools.
+### Grants & Scholarships
+- Full Scholarship – SpaceTech Master's, TU Graz (2026)  
+- Womanium Global AstroBiology Program Scholarship (2023)  
+- Global Grant – Asia-Pacific Space Generation Workshop (SGAC) (2021)  
+- Student Scholarship – TLG: MVA Workshop for Students & Young Professionals (2021)  
+- Diversity Scholarship – Undergraduate Studies (Panjab University, 2010)
 
-## Projects
-### Study of Small Satellite Constellation for High-Resolution Greenhouse Gas Monitoring
-[Publication](https://www.researchgate.net/publication/374550686_Study_of_Small_Satellite_Constellation_for_High-Resolution_Greenhouse_Gas_Monitoring)
+### Research Interests
+Space sciences & instrumentation • Exoplanet atmospheres & science yields • Applied mathematics • Computational analysis • Small satellite missions • Space debris mitigation • Earth observation & remote sensing
 
-This paper aims to improve the capacity of existing GHG monitoring systems by presenting a cost-effective conceptual small satellite constellation mission design based on a novel payload for active remote sensing of CO2 and CH4 with high temporal and spatial resolution.
+### Research Experience & Projects
+**Small Satellite Project Group – Space Generation Advisory Council (SGAC)**  
+Co-Researcher • 2023 – Present  
+- **Project 4**: Interstellar small satellite study with insertion into an exoplanet atmosphere for composition analysis (mass spectrometry, particle impact sensors; interstellar comms & relativistic flybys).  
+- **Project 3**: Small satellites for optical communications around the Moon (feasibility study: functional/system definition, SPENVIS TID calculations, delta-V/fuel budgeting).  
+- **Project 2**: Revolutionizing space traffic management with sub-GEO smallsat constellation (systems engineering: structures, CDHS, astrodynamics via MATLAB).  
+- **Project 1**: High-resolution GHG monitoring constellation (CH₄ & CO₂ focus; design & data processing).
 
-### Analysis of the Impact of volcanic eruptions on fishery resources using Earth Observation Data
-[Publication](https://www.researchgate.net/publication/364263323_Analysis_of_the_impact_of_volcanic_eruptions_on_fishery_resources_using_Earth_Observation_data)
+**Andromeda Research Program – Deep Space Initiative**  
+Lead Researcher • 2023 – 2024  
+Comprehensive LEO space debris impact analysis for lunar-bound spacecraft; advocated global sustainability collaboration.
 
-This paper aims to analyze and perform a comparative study of the effect of several volcanic eruptions on aquatic ecosystems using available Earth Observation data.
+**AIOFAR (AI for Ocean Farming)**  
+Researcher / Software Engineer • 2022 – 2023  
+Led ML efforts on satellite/large datasets; contributed to IAC 2022 presentation & journal paper on volcanic eruption impacts on fisheries (EO parameters: SST, turbidity, chlorophyll, etc.).
 
-### Revolutionizing Space Traffic Management: Detection, Tracking, and Characterization Services Using Constellation of Sub-GEO SmallSats
-- Working on the systems engineering side of the research.
-- Portions currently contributed are Structures and CDHS, with an eventual focus on astrodynamics by running Matlab simulations.
+**Space Law & Policy: Earth Observation & Human Rights – SGAC**  
+Co-Researcher • 2023 – 2024  
+Statistical analysis & remote sensing for fair-use data in humanitarian responses (e.g., 2020 Beirut Explosion).
 
-### Lunar Optical High-Rate Data Relay Network: A Preliminary Study for Small Satellite Constellations
-- Working on defining the functional analysis for the project's initial phase.
-- Defining the system definition for spacecraft configuration to design a small satellite orbiting around the Moon.
+**NASA Habitable Worlds Observatory (HWO) Working Groups**  
+Contributor • 2024 – Present  
+- **Galaxy Growth (START WG)**: Science cases on SMBH formation/evolution, multi-phase AGN outflows, reionization elements, LyC escape fraction.  
+- **Exoplanet Science Yield WG (ESYWG) – Survey Strategies Task Group (SSTG)**: Observational workflows for maximizing exo-Earth yields (detection, orbits, atmospheres: H₂O vs. biosignatures like O₂/O₃).  
+- **Project Starshade**: White paper contributions on complementary broadband UV-NIR spectroscopy (biosignatures, 100% throughput, <10⁻¹⁰ contrast).
 
-## Presentations and Conferences
-- “The Technical Feasibility of 3D Printing Technology for Lunar Base”, IAC 2023 Slides
-- “Study of Small Satellite Constellation for High-Resolution Greenhouse Gas Monitoring” IAC 2023
-- “Analysis of the impact of volcanic eruptions on fishery resources using EO data” IAC 2022 Slides
-- “Towards a Lunar Generation MVA 2021 workshop findings”, MVA Winter Workshop, 2022
-- “Rise of space rovers and robotics in the Asia Pacific region” AP-SGOW, 2021
-- “Towards a Lunar Generation: First MVA Online Workshop” 2021
-- “Explore Titan’s Surface and Saltwater Layer for Potential Life”, 2023
+### Preprints (arXiv, 2025)
+1. L. Zhang, **G. Kaur**, T. Gao, et al. "Deciphering the Launching of Multi-phase AGN-driven Outflows..."  
+2. X. Fu, S. McCandliss, ..., **G. Kaur**, et al. "Spatially Resolving the Fundamental Elements of Reionization..."  
+3. A. Citro, C. A. Carr, ..., **G. Kaur**, et al. "Identifying the Contributors to Cosmic Reionization with the Habitable Worlds Observatory..."
 
-## Publications
-1. A Abruscato,..., G. Kaur, et al, ”Small Satellites application for optical communications around the moon: a feasibility study”, IAC 24 **accepted**
-2. M Nayyer,..., G. Kaur, et al, ”Optimizing SmallSat Constellation for Enhanced STM in LEO”, IAC 24 **accepted**
-3. G Kaur, F Sougioultzoglou, A M. Hein, “Impact Analysis of Space Debris Present in LEO to Spacecraft Aiming for the Lunar Orbit”, IAC 24 **accepted**
-4. I Fiore,..., G Kaur, et al, ”Lunex SpaceHomes Project Innovations and Challenges in Lunar Habitat Development: A Sustainable Future on the Moon through the use of Artificial Intelligence (AI)”, IAC 24 **accepted**
-5. A Amhaz,..., G Kaur, S Difallah, et al, “The Role and Challenges of Earth Observation in the 2020 Beirut Explosion Humanitarian Response”, IAC 24 **accepted**
-6. L Ligono, T Nguyen, G Kaur, G Christodoulou, E Fern´andez-Rodr´ıguez, “Analysis of the impact of volcanic eruptions in Kilauea Volcano using Earth Observation data” **submitted**
-7. G Kaur, et al, “The Technical Feasibility of 3D Printing Technology for Lunar Base”, IAC 2023 
-8. A Karim,..., G Kaur, K Mirza, et al, “Study of Small Satellite Constellation for High-Resolution Greenhouse Gas Monitoring” IAC 2023 
-9. Z Rowland, M Thi,..., G Kaur, Z Okba, “Analysis of the impact of volcanic eruptions on fishery resources using Earth Observation data” IAC 
+### Selected Publications & Proceedings
+- Hall, H., ..., **G. Kaur**, et al. "Interstellar Small Satellite Study..." (IAC 2025)  
+- Abruscato, A., ..., **G. Kaur**, et al. "Small Satellites Application for Optical Communications..." (IAC 2024, IAF Paper)  
+- **G. Kaur**, et al. "Space Debris Impact Analysis..." (IAC 2024)  
+- Karim, A., ..., **G. Kaur**, et al. "Study of Small Satellite Constellation for High-Resolution GHG Monitoring" (IAC 2023)  
+- And more (full list on ResearchGate / Google Scholar)
 
-- [Medium Blog](https://medium.com/@gagandeep.docs)
+**Upcoming**: Contributing to survey strategies / yield simulations paper for JATIS HWO Special Edition (submission Jan 2026).
+
+### Presentations & Conferences
+- IAC 2025, 2024, 2023, 2022  
+- MVA Workshops (2021–2022)  
+- AP-SGOW 2021  
+- And others (see CV for details)
+
+### Medium Blog
+[medium.com/@gagandeep.docs](https://medium.com/@gagandeep.docs)
+
+Feel free to fork, star, or reach out for collaborations! 🚀
