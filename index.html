@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gagandeep Kaur — Space Systems &amp; Direct-Imaging Instrumentation</title>
+<meta name="description" content="Space systems engineer and researcher working on exoplanet direct-imaging instrumentation, mission architecture, and applied AI. Open to EU roles and research collaborations." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --space-900:#070A14;
+    --space-850:#0A0F1D;
+    --space-800:#0D1322;
+    --space-700:#131A2C;
+    --line:rgba(150,168,210,0.14);
+    --line-strong:rgba(150,168,210,0.28);
+    --star:#ECEFF8;
+    --muted:#97A2BE;
+    --muted-dim:#6E7894;
+    --teal:#57D9C8;
+    --teal-soft:rgba(87,217,200,0.14);
+    --amber:#E9A04B;
+    --amber-soft:rgba(233,160,75,0.14);
+    --accent:var(--teal);
+    --accent-soft:var(--teal-soft);
+    --maxw:1080px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+
+  body{
+    background:var(--space-900);
+    color:var(--star);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  /* ambient starfield sits behind everything */
+  #stars{position:fixed;inset:0;z-index:0;pointer-events:none}
+  .wrap{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  .mono{font-family:'IBM Plex Mono',monospace;letter-spacing:.04em}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--accent);
+    display:inline-flex;align-items:center;gap:.6em;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--accent);opacity:.7}
+
+  a{color:inherit;text-decoration:none}
+
+  /* ---------- top bar ---------- */
+  header.bar{
+    position:sticky;top:0;z-index:20;
+    backdrop-filter:blur(10px);
+    background:linear-gradient(to bottom,rgba(7,10,20,.92),rgba(7,10,20,.55));
+    border-bottom:1px solid var(--line);
+  }
+  .bar-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .sig{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:.01em;font-size:1.02rem}
+  .sig b{color:var(--accent)}
+  .navlinks{display:flex;gap:26px;font-size:.85rem;color:var(--muted)}
+  .navlinks a{transition:color .2s}
+  .navlinks a:hover{color:var(--star)}
+  @media(max-width:680px){.navlinks{display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:90px 0 70px}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:36px}}
+
+  h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    font-size:clamp(2.1rem,5.4vw,3.5rem);
+    line-height:1.06;
+    letter-spacing:-.015em;
+    margin:18px 0 22px;
+  }
+  h1 .reveal{
+    color:var(--accent);
+    position:relative;white-space:nowrap;
+  }
+  .lede{font-size:1.07rem;color:var(--muted);max-width:36ch}
+  .lede strong{color:var(--star);font-weight:600}
+
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+  .btn{
+    font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:.92rem;
+    padding:12px 22px;border-radius:2px;border:1px solid transparent;
+    transition:transform .15s, background .2s, border-color .2s;
+    display:inline-flex;align-items:center;gap:.5em;
+  }
+  .btn-primary{background:var(--accent);color:#061018}
+  .btn-primary:hover{transform:translateY(-2px)}
+  .btn-ghost{border-color:var(--line-strong);color:var(--star)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* starshade figure */
+  .figure{position:relative;aspect-ratio:1;max-width:360px;margin-inline:auto;width:100%}
+  .figure svg{width:100%;height:100%;overflow:visible}
+  .occulter{transform-origin:center;animation:slidein 1.6s cubic-bezier(.22,1,.36,1) both}
+  @keyframes slidein{from{transform:translateX(40px) scale(.9);opacity:0}to{transform:none;opacity:1}}
+  .starglow{animation:pulse 5s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:.55}50%{opacity:.9}}
+  .planet{animation:appear 2s ease 1s both}
+  @keyframes appear{from{opacity:0;r:0}to{opacity:1}}
+  .figcap{
+    position:absolute;left:0;bottom:-6px;
+    font-family:'IBM Plex Mono',monospace;font-size:.66rem;
+    color:var(--muted-dim);letter-spacing:.05em;line-height:1.5;
+  }
+
+  /* ---------- the lens ---------- */
+  .lens{
+    margin:64px 0 0;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:linear-gradient(180deg,var(--space-800),var(--space-850));
+    padding:22px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  }
+  .lens-label{font-size:.84rem;color:var(--muted);max-width:38ch}
+  .lens-label b{color:var(--star);font-weight:600}
+  .seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:3px;overflow:hidden}
+  .seg button{
+    font-family:'IBM Plex Mono',monospace;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
+    background:transparent;color:var(--muted);border:none;cursor:pointer;
+    padding:10px 16px;transition:background .2s,color .2s;
+  }
+  .seg button + button{border-left:1px solid var(--line-strong)}
+  .seg button[aria-pressed="true"]{background:var(--accent);color:#061018}
+
+  /* ---------- sections ---------- */
+  section{padding:74px 0;border-top:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:38px;flex-wrap:wrap}
+  h2{
+    font-family:'Space Grotesk',sans-serif;font-weight:600;
+    font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.01em;
+  }
+
+  /* about tracks */
+  .tracks{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:760px){.tracks{grid-template-columns:1fr}}
+  .track{
+    border:1px solid var(--line);border-radius:4px;padding:28px;
+    background:var(--space-850);transition:border-color .3s,opacity .3s,transform .3s;
+  }
+  .track h3{
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.15rem;
+    margin-bottom:12px;display:flex;align-items:center;gap:.6em;
+  }
+  .track .dot{width:9px;height:9px;border-radius:50%}
+  .track.research .dot{background:var(--teal)}
+  .track.eng .dot{background:var(--amber)}
+  .track p{color:var(--muted);font-size:.96rem}
+  /* lens behavior */
+  body[data-lens="research"] .track.eng,
+  body[data-lens="engineer"] .track.research{opacity:.42}
+  body[data-lens="research"] .track.research{border-color:rgba(87,217,200,.4)}
+  body[data-lens="engineer"] .track.eng{border-color:rgba(233,160,75,.4)}
+  body[data-lens="research"] .track.research{order:-1}
+  body[data-lens="engineer"] .track.eng{order:-1}
+
+  /* work cards */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+  .card{
+    border:1px solid var(--line);border-radius:4px;padding:24px;
+    background:var(--space-850);position:relative;overflow:hidden;
+    transition:border-color .25s,transform .25s,opacity .3s;
+  }
+  .card:hover{border-color:var(--line-strong);transform:translateY(-3px)}
+  .card .tag{
+    font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted-dim);display:flex;gap:10px;align-items:center;margin-bottom:14px;
+  }
+  .card .tag .kind{padding:3px 8px;border-radius:2px;border:1px solid var(--line-strong)}
+  .card[data-track="research"] .kind{color:var(--teal);border-color:rgba(87,217,200,.35)}
+  .card[data-track="engineer"] .kind{color:var(--amber);border-color:rgba(233,160,75,.35)}
+  .card h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.08rem;margin-bottom:8px;line-height:1.25}
+  .card p{color:var(--muted);font-size:.9rem}
+  body[data-lens="research"] .card[data-track="engineer"],
+  body[data-lens="engineer"] .card[data-track="research"]{opacity:.4}
+
+  /* capabilities */
+  .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:760px){.caps{grid-template-columns:1fr}}
+  .cap{border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--space-850)}
+  .cap h4{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.95rem;margin-bottom:14px}
+  .cap ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .cap li{
+    font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--muted);
+    border:1px solid var(--line);border-radius:2px;padding:5px 9px;
+  }
+
+  /* affiliations strip */
+  .affil{display:flex;flex-wrap:wrap;gap:14px}
+  .affil span{
+    font-size:.82rem;color:var(--muted);
+    border:1px solid var(--line);border-radius:2px;padding:9px 14px;background:var(--space-850);
+  }
+  .affil b{color:var(--star);font-weight:600}
+
+  /* contact */
+  .contact-box{
+    border:1px solid var(--line-strong);border-radius:6px;
+    background:linear-gradient(180deg,var(--space-800),var(--space-850));
+    padding:42px;text-align:center;
+  }
+  .contact-box h2{margin-bottom:14px}
+  .contact-box p{color:var(--muted);max-width:46ch;margin:0 auto 26px}
+  .links{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+  .links a{
+    font-family:'IBM Plex Mono',monospace;font-size:.82rem;color:var(--muted);
+    border-bottom:1px solid transparent;transition:color .2s,border-color .2s;
+  }
+  .links a:hover{color:var(--accent);border-color:var(--accent)}
+
+  footer{padding:40px 0 56px;text-align:center;color:var(--muted-dim);font-size:.78rem}
+  footer .mono{color:var(--muted-dim)}
+
+  /* reveal on scroll */
+  .rise{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .rise.in{opacity:1;transform:none}
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .rise{opacity:1;transform:none}
+    html{scroll-behavior:auto}
+  }
+
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body data-lens="both">
+<canvas id="stars"></canvas>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <div class="sig">Gagandeep <b>Kaur</b></div>
+    <nav class="navlinks">
+      <a href="#about">Profile</a>
+      <a href="#work">Work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="border-top:none;padding-top:0">
+    <div class="wrap">
+      <div class="hero-grid" style="padding-top:80px">
+        <div>
+          <span class="eyebrow">TU Graz · SpaceTech MSc · Open to EU roles</span>
+          <h1>I design the systems and instruments that make <span class="reveal">faint worlds</span> visible.</h1>
+          <p class="lede"><strong>Space systems engineer and researcher</strong> working across exoplanet direct-imaging instrumentation, mission architecture, and applied AI — with 9+ years shipping real software and data systems behind it.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="btn btn-ghost" href="#work">See selected work</a>
+          </div>
+        </div>
+        <div class="figure" aria-hidden="true">
+          <svg viewBox="0 0 200 200" role="img">
+            <!-- suppressed star -->
+            <circle class="starglow" cx="148" cy="62" r="34" fill="url(#g1)"/>
+            <circle cx="148" cy="62" r="7" fill="#E9A04B"/>
+            <!-- occulter (starshade petals) -->
+            <g class="occulter">
+              <g fill="#0A0F1D" stroke="rgba(150,168,210,.35)" stroke-width=".8">
+                <path d="M100 100 m0,-46 q5,-14 0,-26 q-5,12 0,26
+                         M100 100 m32,-32 q14,-5 24,-14 q-12,9 -24,14
+                         M100 100 m46,0 q14,5 26,0 q-12,-5 -26,0
+                         M100 100 m32,32 q14,5 24,14 q-9,-12 -24,-14
+                         M100 100 m0,46 q5,14 0,26 q-5,-12 0,-26
+                         M100 100 m-32,32 q-14,5 -24,14 q12,-9 24,-14
+                         M100 100 m-46,0 q-14,-5 -26,0 q12,5 26,0
+                         M100 100 m-32,-32 q-14,-5 -24,-14 q9,12 24,14"/>
+                <circle cx="100" cy="100" r="46"/>
+              </g>
+            </g>
+            <!-- revealed planet -->
+            <circle class="planet" cx="150" cy="120" r="4.5" fill="#57D9C8"/>
+            <circle class="planet" cx="150" cy="120" r="11" fill="none" stroke="#57D9C8" stroke-opacity=".4" stroke-width=".7"/>
+            <defs>
+              <radialGradient id="g1"><stop offset="0%" stop-color="#F6C98A"/><stop offset="55%" stop-color="rgba(233,160,75,.45)"/><stop offset="100%" stop-color="rgba(233,160,75,0)"/></radialGradient>
+            </defs>
+          </svg>
+          <div class="figcap">FIG. 01 — occulter suppresses starlight;<br/>faint companion resolved at small IWA.</div>
+        </div>
+      </div>
+
+      <!-- THE LENS -->
+      <div class="lens">
+        <div class="lens-label"><b>Two tracks, one person.</b> Choose how to read this profile — the same way a good cover letter leads with what the role actually needs.</div>
+        <div class="seg" role="group" aria-label="Choose profile emphasis">
+          <button data-lens-btn="research" aria-pressed="false">Researcher</button>
+          <button data-lens-btn="both" aria-pressed="true">Both</button>
+          <button data-lens-btn="engineer" aria-pressed="false">Engineer</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head rise"><span class="eyebrow">01</span><h2>Profile</h2></div>
+      <div class="tracks">
+        <div class="track research rise">
+          <h3><span class="dot"></span>Research</h3>
+          <p>I work on the mission architectures and starlight-suppression instruments behind direct imaging of potentially habitable worlds — self-consistent starshade concepts (occulter geometry, inner working angle, formation-flying separation) and yield modeling with EXOSIMS/AYO for NASA's Habitable Worlds Observatory. Co-author on HWO and starshade studies indexed in NASA ADS; active in HWO working groups and SGAC.</p>
+        </div>
+        <div class="track eng rise">
+          <h3><span class="dot"></span>Engineering</h3>
+          <p>I build the systems that get missions and their data working: satellite architecture modeling, command &amp; data handling, and SPENVIS radiation-dose analysis, plus production Python/SQL pipelines, ML models, and workflow automation delivered across consulting, enterprise, and startup settings — including co-founding and leading engineering for a multilingual voice-agent platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head rise"><span class="eyebrow">02</span><h2>Selected work</h2></div>
+      <div class="cards">
+        <article class="card rise" data-track="research">
+          <div class="tag"><span class="kind">Publication</span> NASA ADS</div>
+          <h3>Habitable Worlds Observatory — science case</h3>
+          <p>Co-author on HWO exoplanet science and yield-modeling work (ESYWG / JATIS, under review). Contributes science-case definition and EXOSIMS/AYO yield analysis.</p>
+        </article>
+        <article class="card rise" data-track="research">
+          <div class="tag"><span class="kind">Publication</span> 2025</div>
+          <h3>DARES Starshade Astrobiology white paper</h3>
+          <p>Co-author on a starshade direct-imaging astrobiology study (Seager et al., 2025), indexed in NASA ADS.</p>
+        </article>
+        <article class="card rise" data-track="research">
+          <div class="tag"><span class="kind">Concept study</span> NASA ASTRA</div>
+          <h3>PETRA — starshade mission concept</h3>
+          <p>Self-consistent occulter design developed for NASA's ASTRA incubator: IWA ≈ 70 mas, ~41 m occulter, ~61,000 km separation, with a coherent optical and mission-geometry budget.</p>
+        </article>
+        <article class="card rise" data-track="engineer">
+          <div class="tag"><span class="kind">Applied AI</span> Gemini API</div>
+          <h3>OrbitalGuard — satellite health monitoring</h3>
+          <p>AI tool for satellite-fleet health monitoring built on the Gemini API, developed for a Google generative-AI builder campaign.</p>
+        </article>
+        <article class="card rise" data-track="engineer">
+          <div class="tag"><span class="kind">Founder / CTO</span> Product</div>
+          <h3>iVoz AI — multilingual voice agents</h3>
+          <p>Co-founded and led engineering for a multilingual voice-agent platform: real-time speech pipelines, model orchestration, and production deployment.</p>
+        </article>
+        <article class="card rise" data-track="engineer">
+          <div class="tag"><span class="kind">Systems eng.</span> SpaceTech</div>
+          <h3>Mission &amp; smallsat design studies</h3>
+          <p>Applied systems-engineering work across the SpaceTech MSc: satellite architecture, C&amp;DH definition, SPENVIS radiation modeling, interface and decision analysis.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="capabilities">
+    <div class="wrap">
+      <div class="sec-head rise"><span class="eyebrow">03</span><h2>Capabilities</h2></div>
+      <div class="caps">
+        <div class="cap rise">
+          <h4>Space &amp; mission design</h4>
+          <ul>
+            <li>Mission architecture</li><li>C&amp;DH</li><li>SPENVIS</li><li>EXOSIMS / AYO</li><li>Yield modeling</li><li>Starshade / occulter design</li><li>SMAD</li>
+          </ul>
+        </div>
+        <div class="cap rise">
+          <h4>Software &amp; AI</h4>
+          <ul>
+            <li>Python</li><li>NumPy</li><li>SciPy</li><li>Astropy</li><li>scikit-learn</li><li>TensorFlow</li><li>XGBoost</li><li>SQL</li><li>Workflow automation</li>
+          </ul>
+        </div>
+        <div class="cap rise">
+          <h4>Earth observation</h4>
+          <ul>
+            <li>Sentinel / Copernicus</li><li>GDAL</li><li>Google Earth Engine</li><li>Geospatial pipelines</li>
+          </ul>
+        </div>
+      </div>
+      <div class="affil rise" style="margin-top:30px">
+        <span><b>TU Graz</b> · SpaceTech MSc</span>
+        <span><b>NASA HWO</b> working groups</span>
+        <span><b>SGAC</b> working groups</span>
+        <span><b>NASA ADS</b> indexed author</span>
+        <span><b>ORCID</b> 0000-0003-3725-6707</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-box rise">
+        <h2>Let's talk</h2>
+        <p>Open to space systems engineering, space-data, and applied-AI roles across the EU — and to research collaborations in direct-imaging instrumentation.</p>
+        <div class="links">
+          <a href="mailto:you@example.com">Email →</a>
+          <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn →</a>
+          <a href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub →</a>
+          <a href="https://orcid.org/0000-0003-3725-6707" target="_blank" rel="noopener">ORCID →</a>
+          <a href="#" target="_blank" rel="noopener">NASA ADS library →</a>
+          <a href="#" target="_blank" rel="noopener">CV (PDF) →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">Gagandeep Kaur · Graz, Austria · built for the direct-imaging era</span>
+  </div>
+</footer>
+
+<script>
+  // ---- lens toggle ----
+  const body = document.body;
+  document.querySelectorAll('[data-lens-btn]').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const v = btn.getAttribute('data-lens-btn');
+      body.setAttribute('data-lens', v);
+      document.querySelectorAll('[data-lens-btn]').forEach(b=>b.setAttribute('aria-pressed', b===btn ? 'true':'false'));
+      // shift accent to match emphasis
+      const root = document.documentElement.style;
+      if(v==='engineer'){ root.setProperty('--accent','var(--amber)'); root.setProperty('--accent-soft','var(--amber-soft)'); }
+      else { root.setProperty('--accent','var(--teal)'); root.setProperty('--accent-soft','var(--teal-soft)'); }
+    });
+  });
+
+  // ---- scroll reveal ----
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.14});
+  document.querySelectorAll('.rise').forEach(el=>io.observe(el));
+
+  // ---- ambient starfield ----
+  const c = document.getElementById('stars');
+  const ctx = c.getContext('2d');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let stars=[], w, h;
+  function resize(){ w=c.width=innerWidth; h=c.height=innerHeight; build(); }
+  function build(){
+    const n = Math.min(140, Math.floor(w*h/14000));
+    stars = Array.from({length:n},()=>({
+      x:Math.random()*w, y:Math.random()*h,
+      r:Math.random()*1.1+.2,
+      a:Math.random()*.5+.2,
+      tw:Math.random()*.02+.004,
+      ph:Math.random()*Math.PI*2
+    }));
+  }
+  function draw(t){
+    ctx.clearRect(0,0,w,h);
+    for(const s of stars){
+      const tw = reduce ? s.a : s.a + Math.sin(t*s.tw + s.ph)*.25;
+      ctx.globalAlpha = Math.max(0,Math.min(1,tw));
+      ctx.fillStyle = Math.random()<.001 ? '#57D9C8' : '#cdd6ee';
+      ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2); ctx.fill();
+    }
+    if(!reduce) requestAnimationFrame(draw);
+  }
+  addEventListener('resize',resize);
+  resize();
+  if(reduce){ draw(0); } else { requestAnimationFrame(draw); }
+</script>
+</body>
+</html>
