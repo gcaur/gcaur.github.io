@@ -5,6 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Gagandeep Kaur — Space Systems &amp; Direct-Imaging Instrumentation</title>
 <meta name="description" content="Space systems engineer and researcher working on exoplanet direct-imaging instrumentation, mission architecture, and applied AI. Open to EU roles and research collaborations." />
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://gcaur.github.io/" />
+<meta property="og:title" content="Gagandeep Kaur — Space Systems &amp; Direct-Imaging Instrumentation" />
+<meta property="og:description" content="Starshade mission concepts, HWO yield modeling (EXOSIMS/AYO), and applied AI — backed by 9+ years of production software and data engineering." />
+<meta property="og:image" content="https://gcaur.github.io/assets/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gagandeep Kaur — Space Systems &amp; Direct-Imaging Instrumentation" />
+<meta name="twitter:description" content="Starshade mission concepts, HWO yield modeling (EXOSIMS/AYO), and applied AI." />
+<meta name="twitter:image" content="https://gcaur.github.io/assets/og.png" />
+<link rel="canonical" href="https://gcaur.github.io/" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -117,9 +132,31 @@
     color:var(--muted-dim);letter-spacing:.05em;line-height:1.5;
   }
 
+  /* ---------- now strip ---------- */
+  .now{
+    margin:48px 0 0;
+    border:1px solid var(--line);border-radius:4px;
+    background:var(--space-850);
+    padding:14px 20px;
+    display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--muted);
+    letter-spacing:.03em;
+  }
+  .now .live{
+    display:inline-flex;align-items:center;gap:.55em;color:var(--accent);
+    letter-spacing:.18em;text-transform:uppercase;font-size:.68rem;
+  }
+  .now .live::before{
+    content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  .now span + span::before{content:"·";margin-right:16px;color:var(--muted-dim)}
+  .now span{white-space:nowrap}
+  @media(max-width:680px){.now span{white-space:normal}.now span + span::before{content:none}}
+
   /* ---------- the lens ---------- */
   .lens{
-    margin:64px 0 0;
+    margin:24px 0 0;
     border:1px solid var(--line);
     border-radius:4px;
     background:linear-gradient(180deg,var(--space-800),var(--space-850));
@@ -144,6 +181,12 @@
     font-family:'Space Grotesk',sans-serif;font-weight:600;
     font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.01em;
   }
+  .sec-head .sec-link{
+    margin-left:auto;
+    font-family:'IBM Plex Mono',monospace;font-size:.76rem;color:var(--muted);
+    border-bottom:1px solid transparent;transition:color .2s,border-color .2s;
+  }
+  .sec-head .sec-link:hover{color:var(--accent);border-color:var(--accent)}
 
   /* about tracks */
   .tracks{display:grid;grid-template-columns:1fr 1fr;gap:26px}
@@ -189,8 +232,32 @@
   body[data-lens="research"] .card[data-track="engineer"],
   body[data-lens="engineer"] .card[data-track="research"]{opacity:.4}
 
+  /* publications */
+  .pub-group{margin-bottom:34px}
+  .pub-group:last-child{margin-bottom:0}
+  .pub-group h3{
+    font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.72rem;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--muted-dim);
+    margin-bottom:16px;
+  }
+  .pub{
+    border-left:2px solid var(--line-strong);
+    padding:4px 0 4px 18px;margin-bottom:18px;
+    transition:border-color .25s;
+  }
+  .pub:hover{border-color:var(--accent)}
+  .pub .pub-title{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:.98rem;line-height:1.4}
+  .pub .pub-meta{font-size:.82rem;color:var(--muted);margin-top:3px}
+  .pub .pub-meta em{font-style:normal;color:var(--muted-dim)}
+  .pub .me{color:var(--accent);font-weight:600}
+  .pub .badge{
+    font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;
+    border:1px solid rgba(87,217,200,.35);color:var(--teal);border-radius:2px;
+    padding:2px 7px;margin-left:8px;vertical-align:2px;white-space:nowrap;
+  }
+
   /* capabilities */
-  .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .caps{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
   @media(max-width:760px){.caps{grid-template-columns:1fr}}
   .cap{border:1px solid var(--line);border-radius:4px;padding:22px;background:var(--space-850)}
   .cap h4{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.95rem;margin-bottom:14px}
@@ -207,6 +274,10 @@
     border:1px solid var(--line);border-radius:2px;padding:9px 14px;background:var(--space-850);
   }
   .affil b{color:var(--star);font-weight:600}
+  .affil-label{
+    font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--muted-dim);margin:34px 0 14px;
+  }
 
   /* contact */
   .contact-box{
@@ -248,6 +319,7 @@
     <nav class="navlinks">
       <a href="#about">Profile</a>
       <a href="#work">Work</a>
+      <a href="#publications">Publications</a>
       <a href="#capabilities">Capabilities</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -297,6 +369,15 @@
         </div>
       </div>
 
+      <!-- NOW -->
+      <div class="now" role="note" aria-label="Current activity">
+        <span class="live">Now</span>
+        <span>JATIS manuscript in revision (Latouf et al.)</span>
+        <span>HWO SCDD synthesis paper nearing submission</span>
+        <span>SpaceTech presence module — DLR GSOC, July 2026</span>
+        <span>Seeking space-systems &amp; applied-AI roles in the EU</span>
+      </div>
+
       <!-- THE LENS -->
       <div class="lens">
         <div class="lens-label"><b>Two tracks, one person.</b> Choose how to read this profile — the same way a good cover letter leads with what the role actually needs.</div>
@@ -315,11 +396,11 @@
       <div class="tracks">
         <div class="track research rise">
           <h3><span class="dot"></span>Research</h3>
-          <p>I work on the mission architectures and starlight-suppression instruments behind direct imaging of potentially habitable worlds — self-consistent starshade concepts (occulter geometry, inner working angle, formation-flying separation) and yield modeling with EXOSIMS/AYO for NASA's Habitable Worlds Observatory. Co-author on HWO and starshade studies indexed in NASA ADS; active in HWO working groups and SGAC.</p>
+          <p>I work on the mission architectures and starlight-suppression instruments behind direct imaging of potentially habitable worlds — self-consistent starshade concepts (occulter geometry, inner working angle, formation-flying separation), UV-to-NIR spectroscopy trade-offs for biosignature detection, and yield modeling with EXOSIMS/AYO for NASA's Habitable Worlds Observatory. Co-author on HWO and starshade studies indexed in NASA ADS; active in HWO working groups and SGAC.</p>
         </div>
         <div class="track eng rise">
           <h3><span class="dot"></span>Engineering</h3>
-          <p>I build the systems that get missions and their data working: satellite architecture modeling, command &amp; data handling, and SPENVIS radiation-dose analysis, plus production Python/SQL pipelines, ML models, and workflow automation delivered across consulting, enterprise, and startup settings — including co-founding and leading engineering for a multilingual voice-agent platform.</p>
+          <p>I build the systems that get missions and their data working: satellite architecture modeling, command &amp; data handling, SPENVIS radiation-dose analysis, and link-budget/Δv/power sizing, plus production Python/SQL pipelines, ML models, and workflow automation delivered across consulting, enterprise, and startup settings — including co-founding and leading engineering for a multilingual voice-agent platform.</p>
         </div>
       </div>
     </div>
@@ -331,18 +412,23 @@
       <div class="cards">
         <article class="card rise" data-track="research">
           <div class="tag"><span class="kind">Publication</span> NASA ADS</div>
-          <h3>Habitable Worlds Observatory — science case</h3>
-          <p>Co-author on HWO exoplanet science and yield-modeling work (ESYWG / JATIS, under review). Contributes science-case definition and EXOSIMS/AYO yield analysis.</p>
+          <h3>Habitable Worlds Observatory — exoplanet yield science</h3>
+          <p>Co-author on HWO exoplanet survey-strategy and yield-modeling work (ESYWG / JATIS, under review): detection → orbit determination → spectroscopic characterization workflows, with wavelength, SNR, and detector-noise trade-offs via EXOSIMS/AYO.</p>
         </article>
         <article class="card rise" data-track="research">
           <div class="tag"><span class="kind">Publication</span> 2025</div>
           <h3>DARES Starshade Astrobiology white paper</h3>
-          <p>Co-author on a starshade direct-imaging astrobiology study (Seager et al., 2025), indexed in NASA ADS.</p>
+          <p>Co-author on a broadband, high-throughput exoEarth mission concept (Seager et al., 2025) — led UV-to-near-IR spectroscopy trade-offs for biosignature detection (O₂, O₃, H₂O, CO₂) at &lt;10⁻¹⁰ contrast.</p>
         </article>
         <article class="card rise" data-track="research">
           <div class="tag"><span class="kind">Concept study</span> NASA ASTRA</div>
           <h3>PETRA — starshade mission concept</h3>
           <p>Self-consistent occulter design developed for NASA's ASTRA incubator: IWA ≈ 70 mas, ~41 m occulter, ~61,000 km separation, with a coherent optical and mission-geometry budget.</p>
+        </article>
+        <article class="card rise" data-track="research">
+          <div class="tag"><span class="kind">Smallsat studies</span> SGAC · IAC</div>
+          <h3>Smallsat mission studies — SGAC SSPG</h3>
+          <p>Lunar optical-communications smallsat (SPENVIS TID bounding, propulsion sizing, laser-comm CONOPS); interstellar exoplanet-atmosphere probe payload trades; sub-GEO debris-monitoring constellation — published across IAC 2023–2025.</p>
         </article>
         <article class="card rise" data-track="engineer">
           <div class="tag"><span class="kind">Applied AI</span> Gemini API</div>
@@ -359,39 +445,128 @@
           <h3>Mission &amp; smallsat design studies</h3>
           <p>Applied systems-engineering work across the SpaceTech MSc: satellite architecture, C&amp;DH definition, SPENVIS radiation modeling, interface and decision analysis.</p>
         </article>
+        <article class="card rise" data-track="engineer">
+          <div class="tag"><span class="kind">Consulting</span> World Bank</div>
+          <h3>Public-sector digital infrastructure</h3>
+          <p>IT consultant on the World Bank BFAIR project: designed a Public Investment Management system architecture and authored a digital-education infrastructure concept for government schools in Punjab, India.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="wrap">
+      <div class="sec-head rise">
+        <span class="eyebrow">03</span><h2>Publications</h2>
+        <a class="sec-link" href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-3725-6707" target="_blank" rel="noopener">View all on NASA ADS →</a>
+      </div>
+
+      <div class="pub-group rise">
+        <h3>Under review &amp; whitepapers</h3>
+        <div class="pub">
+          <div class="pub-title">Possible Observational Survey Strategies to Maximize Exoplanet Yields <span class="badge">JATIS · under review</span></div>
+          <div class="pub-meta">Latouf, Fogarty, Stark, Savransky, Morgan, Alei, <span class="me">Kaur G.</span> et al. — <em>HWO SSTG report, submitted 2026</em></div>
+        </div>
+        <div class="pub">
+          <div class="pub-title">Starshade: A Broad-Band, High-Throughput Mission for ExoEarth Discovery and Characterization</div>
+          <div class="pub-meta">Seager, Bennett, Taaki, <span class="me">Kaur G.</span>, Hu, Shaklan et al. — <em>NASA DARES Astrobiology Whitepaper, 2025</em></div>
+        </div>
+      </div>
+
+      <div class="pub-group rise">
+        <h3>Refereed proceedings — ASP Conf. Series Vol. 542 (2026)</h3>
+        <div class="pub">
+          <div class="pub-title">Deciphering Multi-phase AGN-driven Outflows</div>
+          <div class="pub-meta">Zhang, <span class="me">G. Kaur</span>, Gao, Hicks et al.</div>
+        </div>
+        <div class="pub">
+          <div class="pub-title">Formation &amp; Evolution of SMBHs: IMBH Mass and Spin Functions</div>
+          <div class="pub-meta">Cann, Smith, …, <span class="me">G. Kaur</span> et al.</div>
+        </div>
+        <div class="pub">
+          <div class="pub-title">Identifying Contributors to Cosmic Reionization with HWO</div>
+          <div class="pub-meta">Citro, …, <span class="me">G. Kaur</span> et al.</div>
+        </div>
+        <div class="pub">
+          <div class="pub-title">Spatially Resolving Fundamental Elements of Reionization</div>
+          <div class="pub-meta">Xu, …, <span class="me">G. Kaur</span> et al.</div>
+        </div>
+      </div>
+
+      <div class="pub-group rise">
+        <h3>Conference proceedings — IAC (selection)</h3>
+        <div class="pub">
+          <div class="pub-title">Space Debris Impact Analysis for Lunar-Bound Spacecraft in LEO <span class="badge">First author</span></div>
+          <div class="pub-meta"><span class="me">G. Kaur</span> et al. — <em>IAC 2024</em></div>
+        </div>
+        <div class="pub">
+          <div class="pub-title">Interstellar SmallSat with Insertion into Exoplanet Atmosphere for Composition Analysis</div>
+          <div class="pub-meta">Hall, …, <span class="me">G. Kaur</span> et al. — <em>IAC 2025</em></div>
+        </div>
+        <div class="pub">
+          <div class="pub-title">SmallSats for Optical Communications around the Moon</div>
+          <div class="pub-meta">Abruscato, …, <span class="me">G. Kaur</span> et al. — <em>IAC 2024</em></div>
+        </div>
+        <div class="pub">
+          <div class="pub-title">Optimizing SmallSat Constellation for Enhanced STM in LEO</div>
+          <div class="pub-meta">Nayyer, …, <span class="me">G. Kaur</span> et al. — <em>IAC 2024</em></div>
+        </div>
+        <div class="pub">
+          <div class="pub-title">Small Satellite Constellation for High-Resolution GHG Monitoring</div>
+          <div class="pub-meta">Karim, …, <span class="me">G. Kaur</span> et al. — <em>IAC 2023</em></div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="capabilities">
     <div class="wrap">
-      <div class="sec-head rise"><span class="eyebrow">03</span><h2>Capabilities</h2></div>
+      <div class="sec-head rise"><span class="eyebrow">04</span><h2>Capabilities</h2></div>
       <div class="caps">
         <div class="cap rise">
-          <h4>Space &amp; mission design</h4>
+          <h4>Astronomical &amp; mission analysis</h4>
           <ul>
-            <li>Mission architecture</li><li>C&amp;DH</li><li>SPENVIS</li><li>EXOSIMS / AYO</li><li>Yield modeling</li><li>Starshade / occulter design</li><li>SMAD</li>
+            <li>EXOSIMS / AYO</li><li>Yield modeling</li><li>Starshade / occulter design</li><li>SPENVIS (TID)</li><li>CCD/CMOS detector modeling</li><li>Link-budget · Δv · power</li><li>MATLAB / Simulink</li>
+          </ul>
+        </div>
+        <div class="cap rise">
+          <h4>Systems engineering</h4>
+          <ul>
+            <li>Phase 0/A/B mission design</li><li>Requirements flow-down</li><li>Mass / power / data budgets</li><li>CONOPS development</li><li>ECSS-aligned V&amp;V</li><li>AIV planning</li><li>C&amp;DH</li><li>SMAD</li>
           </ul>
         </div>
         <div class="cap rise">
           <h4>Software &amp; AI</h4>
           <ul>
-            <li>Python</li><li>NumPy</li><li>SciPy</li><li>Astropy</li><li>scikit-learn</li><li>TensorFlow</li><li>XGBoost</li><li>SQL</li><li>Workflow automation</li>
+            <li>Python</li><li>NumPy</li><li>SciPy</li><li>Astropy</li><li>pandas</li><li>scikit-learn</li><li>TensorFlow</li><li>PyTorch</li><li>XGBoost</li><li>SQL</li><li>Git</li><li>LaTeX</li><li>Workflow automation</li>
           </ul>
         </div>
         <div class="cap rise">
-          <h4>Earth observation</h4>
+          <h4>Geospatial &amp; Earth observation</h4>
           <ul>
-            <li>Sentinel / Copernicus</li><li>GDAL</li><li>Google Earth Engine</li><li>Geospatial pipelines</li>
+            <li>Sentinel / Copernicus</li><li>QGIS</li><li>ArcGIS</li><li>GDAL</li><li>Google Earth Engine</li><li>Remote sensing</li><li>HEC-RAS</li><li>Geospatial pipelines</li>
           </ul>
         </div>
       </div>
+
       <div class="affil rise" style="margin-top:30px">
-        <span><b>TU Graz</b> · SpaceTech MSc</span>
+        <span><b>TU Graz</b> · SpaceTech MSc · full scholarship</span>
         <span><b>NASA HWO</b> working groups</span>
         <span><b>SGAC</b> working groups</span>
         <span><b>NASA ADS</b> indexed author</span>
         <span><b>ORCID</b> 0000-0003-3725-6707</span>
+      </div>
+
+      <div class="rise">
+        <div class="affil-label">Grants, schools &amp; training</div>
+        <div class="affil">
+          <span>ESA/ESOC Darmstadt · presence module</span>
+          <span>Womanium Global Astrobiology Program · 2023</span>
+          <span>SGAC Global Grant · 2021</span>
+          <span>ESCAPE Data Science for Astronomy · CERN School of Computing</span>
+          <span>Luxembourg Space Propulsion Summer School · 2022</span>
+          <span>Europlanet GMAP Planetary Mapping · 2023–24</span>
+        </div>
       </div>
     </div>
   </section>
@@ -406,8 +581,9 @@
           <a href="https://www.linkedin.com/in/engineergkaur/" target="_blank" rel="noopener">LinkedIn →</a>
           <a href="https://github.com/gcaur" target="_blank" rel="noopener">GitHub →</a>
           <a href="https://orcid.org/0000-0003-3725-6707" target="_blank" rel="noopener">ORCID →</a>
-          <a href="#" target="_blank" rel="noopener">NASA ADS library →</a>
-          <a href="#" target="_blank" rel="noopener">CV (PDF) →</a>
+          <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-3725-6707" target="_blank" rel="noopener">NASA ADS →</a>
+          <!-- Second CV variant: add assets/Kaur_Engineering_CV.pdf and a second link here, or wire to the lens toggle -->
+          <a id="cv-link" href="assets/Kaur_Science_CV.pdf" target="_blank" rel="noopener">CV (PDF) →</a>
         </div>
       </div>
     </div>
@@ -432,6 +608,10 @@
       const root = document.documentElement.style;
       if(v==='engineer'){ root.setProperty('--accent','var(--amber)'); root.setProperty('--accent-soft','var(--amber-soft)'); }
       else { root.setProperty('--accent','var(--teal)'); root.setProperty('--accent-soft','var(--teal-soft)'); }
+      // per-lens CV variant — currently both point to the science CV.
+      // When an engineering CV exists, drop it in assets/ and uncomment:
+      // const cv = document.getElementById('cv-link');
+      // cv.href = v==='engineer' ? 'assets/Kaur_Engineering_CV.pdf' : 'assets/Kaur_Science_CV.pdf';
     });
   });
 
